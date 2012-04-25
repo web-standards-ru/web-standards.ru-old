@@ -6,7 +6,9 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="description" content="Российское сообщество разработчиков «Веб-стандарты»">
 	<meta name="keywords" content="веб-стандарты, вст, wst, web standards, wsd, wstdays, web standards days, wsg, web standards group, wsg russia, xhtml, html, html5, css, css3, svg, canvas, микроформаты, microformats">
+	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="http://static.web-standards.ru/s/screen.css">
+	<link rel="stylesheet" href="http://static.web-standards.ru/s/mobile.css" media="only screen and (max-width:640px)">
 	<!--[if lt IE 9]><link rel="stylesheet" href="http://static.web-standards.ru/s/ie.css"><![endif]-->
 	<link rel="icon" sizes="16x16" href="http://static.web-standards.ru/i/favicon.ico">
 	<link rel="apple-touch-icon" href="http://static.web-standards.ru/i/favicon.png">

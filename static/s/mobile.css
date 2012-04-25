@@ -1,0 +1,152 @@
+/* Structure */
+
+#header {
+	margin:0;
+	}
+#page {
+	width:auto;
+	min-width:300px;
+	max-width:950px;
+	}
+#content {
+	width:auto;
+	float:none;
+	border:0;
+	border-radius:0;
+	box-shadow:none;
+	}
+#main, #aside {
+	float:none;
+	}
+#main {
+	min-height:0;
+	margin:0;
+	}
+#sidebar {
+	width:auto;
+	float:none;
+	}
+#footer {
+	padding-top:0;
+	padding-left:20px;
+	}
+.module {
+	display:none;
+	}
+
+/* Menu */
+
+#menu {
+	margin-top:-3px;
+	}
+	#sidebar #menu LI * {
+		border-radius:0;
+		}
+	#menu .current * {
+		padding-left:15px;
+		margin-left:0;
+		}
+
+/* Index */
+
+#intro {
+	min-height:0;
+	background:none;
+	padding-right:18px;
+	}
+
+#index #main {
+	width:auto;
+	border-radius:0;
+	}
+
+#index #aside {
+	width:auto;
+	padding-left:20px;
+	padding-right:20px;
+	}
+
+/* Content */
+
+#article #main {
+	width:auto;
+	min-height:0;
+	float:none;
+	margin:0;
+	border-radius:0;
+	}
+#article #aside {
+	display:none;
+	}
+.heading-group .heading {
+	padding-left:20px;
+	padding-right:20px;
+	margin-left:-20px;
+	margin-right:-20px;
+	}
+
+#aside .heading-rss {
+	background-position:50% 100%;
+	text-align:center;
+	}
+	#aside .heading-rss * {
+		float:none;
+		}
+	#aside .heading-rss h2,
+	#aside .heading-rss .rss {
+		display:inline-block;
+		}
+	#aside .heading-rss .rss {
+		margin-left:0;
+		}
+.content .paging {
+	margin-left:-20px;
+	margin-right:-20px;
+	}
+
+/* Article */
+
+.content-article {
+	word-wrap:break-word;
+	}
+.content-article TABLE {
+	width:100%;
+	margin-left:0;
+	margin-right:0;
+	}
+	.content-article TABLE TH,
+	.content-article TABLE TD {
+		padding-left:1%;
+		padding-right:1%;
+		}
+.content-article IMG,
+.video-player {
+	max-width:100%;
+	}
+.form-comment TEXTAREA.text {
+	width:100%;
+	max-width:100%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	}
+
+@media only screen and (max-width:600px) {
+
+	#header .logotype {
+		top:26px;
+		}
+	#header .form-search {
+		background:#153543;
+		position:static;
+		padding:10px;
+		margin-left:-64px;
+		}
+}
+
+@media only screen and (max-width:350px) {
+
+	.form-comment .text {
+		width:80%;
+		}
+}
