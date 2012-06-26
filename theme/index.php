@@ -35,8 +35,12 @@
 								<p><abbr title="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_time('j F'); ?></abbr></p>
 								<h3><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							</div>
+<?php			if ( has_excerpt() ) : ?>
+							<?php the_excerpt(); ?>
+							<p><a href="<?php the_permalink(); ?>">Читать дальше…</a></p>
+<?php			else : ?>
 							<?php the_content(); ?>
-
+<?php			endif; ?>
 						</li>
 <?php		endwhile; ?>
 					</ol>
