@@ -39,7 +39,7 @@
 #menu {
 	margin-top:-3px;
 	}
-	#sidebar #menu LI * {
+	#sidebar #menu li * {
 		border-radius:0;
 		}
 	#menu .current * {
@@ -109,21 +109,21 @@
 .content-article {
 	word-wrap:break-word;
 	}
-.content-article TABLE {
+.content-article table {
 	width:100%;
 	margin-left:0;
 	margin-right:0;
 	}
-	.content-article TABLE TH,
-	.content-article TABLE TD {
+	.content-article table th,
+	.content-article table td {
 		padding-left:1%;
 		padding-right:1%;
 		}
-.content-article IMG,
+.content-article img,
 .video-player {
 	max-width:100%;
 	}
-.form-comment TEXTAREA.text {
+.form-comment textarea.text {
 	width:100%;
 	max-width:100%;
 	-webkit-box-sizing:border-box;

@@ -1,4 +1,4 @@
-TEXTAREA, INPUT, SELECT {
+textarea, input, select {
 	font-family:'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 	}
 
@@ -6,18 +6,18 @@ TEXTAREA, INPUT, SELECT {
 ---------------------------------------- */
 
 /* Logo */
-#header .logotype A IMG {
+#header .logotype a img {
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(opacity=50)';
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
 	}
-#header .logotype A:hover IMG {
+#header .logotype a:hover img {
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(opacity=100)';
 	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
 	}
 
 /* Intro
 ---------------------------------------- */
-* HTML #intro {
+* html #intro {
     height:160px;
     }
 
@@ -25,7 +25,7 @@ TEXTAREA, INPUT, SELECT {
 ---------------------------------------- */
 
 /* Tags */
-* + HTML .module-tags LI {
+* + html .module-tags li {
 	behavior:expression(
 		function(t){
 			t.runtimeStyle.behavior = 'none';
@@ -38,7 +38,7 @@ TEXTAREA, INPUT, SELECT {
 ---------------------------------------- */
 
 /* Paging */
-* + HTML .content .paging LI {
+* + html .content .paging li {
 	display:inline;
 	}
 
@@ -46,7 +46,7 @@ TEXTAREA, INPUT, SELECT {
 ---------------------------------------- */
 
 /* Compact List */
-* + HTML .compact-list .heading P {
+* + html .compact-list .heading p {
 	behavior:expression(
 		function(t){
 			t.runtimeStyle.behavior = 'none';
@@ -59,7 +59,7 @@ TEXTAREA, INPUT, SELECT {
 ---------------------------------------- */
 
 /* Lists */
-* + HTML .content-article UL LI {
+* + html .content-article ul li {
 	behavior:expression(
 		function(t){
 			t.runtimeStyle.behavior = 'none';
@@ -70,11 +70,11 @@ TEXTAREA, INPUT, SELECT {
 		}(this)
 	);
 	}
-	* + HTML .content-article-ul-dash {
+	* + html .content-article-ul-dash {
 		position:absolute;
 		margin:-4px 0 0 -1.5em;
 		}
-* + HTML .content-article OL LI {
+* + html .content-article ol li {
 	behavior:expression(
 		function(t){
 			t.runtimeStyle.behavior = 'none';
@@ -89,13 +89,13 @@ TEXTAREA, INPUT, SELECT {
 		}(this)
 	);
 	}
-	* + HTML .content-article-li-number {
+	* + html .content-article-li-number {
 		position:absolute;
 		margin:-3px 0 0 -1.5em;
 		}
 
 /* Definitions */
-* + HTML .content-article DL DT {
+* + html .content-article dl dt {
 	behavior:expression(
 		function(t){
 			t.runtimeStyle.behavior = 'none';
@@ -108,13 +108,13 @@ TEXTAREA, INPUT, SELECT {
 		}(this)
 	);
 	}
-	* + HTML .content-article-dl-dash {
+	* + html .content-article-dl-dash {
 		position:absolute;
 		margin:-4px 0 0 -1.5em;
 		}
 
 /* Code Block */
-* + HTML .content-article PRE CODE {
+* + html .content-article pre code {
 	display:inline-block;
 	width:100%;
 	white-space:pre;
@@ -131,7 +131,7 @@ TEXTAREA, INPUT, SELECT {
 		}(this)
 	);
 	}
-	* + HTML .content-article-code-number {
+	* + html .content-article-code-number {
 		position:absolute;
 		margin-left:-30px;
 		color:#8DB4CC;
@@ -141,15 +141,15 @@ TEXTAREA, INPUT, SELECT {
 ---------------------------------------- */
 
 /* Comment */
-* + HTML .form-comment {
+* + html .form-comment {
 	zoom:1;
 	}
-	* + HTML .form-comment FIELDSET LABEL {
+	* + html .form-comment fieldset label {
 		vertical-align:1.5%;
 		}
 
 /* Darkbox Done
 ---------------------------------------- */
-* + HTML .darkbox-done .darkbox-canvas {
+* + html .darkbox-done .darkbox-canvas {
 	filter:none !important;
 	}
