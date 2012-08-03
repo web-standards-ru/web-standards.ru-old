@@ -6,7 +6,7 @@
 					<dt>Профиль</dt>
 					<dd class="content content-secondary content-aside">
 						<p>
-							<?php if ( is_editor() ) : ?><a href="/editors/<?php echo $current_user->user_login; ?>/" class="user"><?php echo $current_user->display_name; ?></a><?php else : ?><span class="user"><?php echo $current_user->display_name; ?></span><?php endif; ?>&nbsp;<a href="<?php echo wp_logout_url( get_current_url() ); ?>" title="Выйти">&times;</a>
+							<span class="user"><?php echo $current_user->display_name; ?></span> <a href="<?php echo wp_logout_url( get_current_url() ); ?>" title="Выйти">×</a>
 						</p>
 <?php		if ( is_editor() ) : ?>
 						<ul>
