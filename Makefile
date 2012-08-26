@@ -6,7 +6,7 @@ publish:
 	@rsync -az --delete --exclude '.DS_Store' static/ wst@web-standards.ru:web-standards.ru/static/
 	@rsync -az --exclude '.DS_Store' plugins/ wst@web-standards.ru:web-standards.ru/wp-content/plugins/
 	@rsync -az --exclude '.DS_Store' theme/* wst@web-standards.ru:web-standards.ru/wp-content/themes/webstandards/
-	@rsync -az google*.html yandex*.txt robots.txt humans.txt wst@web-standards.ru:web-standards.ru/
+	@rsync -az .htaccess google*.html yandex*.txt robots.txt humans.txt wst@web-standards.ru:web-standards.ru/
 	@echo 'Done.'
 
 install:
