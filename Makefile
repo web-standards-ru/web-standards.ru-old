@@ -11,17 +11,17 @@ publish:
 
 install:
 	@echo 'Getting WordPress…'
-	@curl -O http://wordpress.org/latest.tar.gz
-	@tar --strip-components=1 -xf latest.tar.gz
-	@rm -f latest.tar.gz
+	@curl -O http://ru.wordpress.org/latest-ru_RU.tar.gz
+	@tar --strip-components=1 -xf latest-ru_RU.tar.gz
+	@rm -f latest-ru_RU.tar.gz
 	@echo 'Copying files…'
-	@cp -r plugins wp-content/plugins
+	@cp -r plugins wp-content/
 	@cp -r theme wp-content/themes/webstandards
 	@cp -n wp-config-sample.php wp-config.php
 	@echo 'Done. Now change wp-config.php to connect DB.'
 
 cleanup:
-	rm -rf wp-* *.php readme.html license.txt
+	@rm -rf wp-* *.php readme.html license.txt
 
 getdump:
 	@echo 'Connecting to DB…'
