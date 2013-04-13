@@ -843,7 +843,8 @@ a {
 
 /* Video Player
 ---------------------------------------- */
-.video-player {
+.video-player,
+.iframe {
 	display:block;
 	margin-bottom:12px;
 	}
