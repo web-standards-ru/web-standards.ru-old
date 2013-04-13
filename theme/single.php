@@ -12,7 +12,7 @@
 							<?php the_content(); ?>
 							<?php edit_post_link('E','<p>','</p>'); ?>
 							<script src="//yandex.st/share/share.js"></script>
-							<p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,lj,twitter"></p>
+							<p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="twitter,facebook,gplus,vkontakte,lj"></p>
 							<?php the_tags('<p class="tag-list">Теги: ', ', ', '</p>'); ?>
 						</div>
 						<div class="content-article" id="comments">
@@ -29,7 +29,7 @@
 						<?php the_content(); ?>
 						<?php edit_post_link('E','<p>','</p>'); ?>
 						<script src="//yandex.st/share/share.js"></script>
-						<p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="yaru,vkontakte,facebook,lj,twitter"></p>
+						<p class="share-buttons yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="twitter,facebook,gplus,vkontakte,lj"></p>
 					</div>
 				</div>
 <?php		endif; ?>
