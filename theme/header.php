@@ -12,6 +12,7 @@
 	<!--[if lt IE 9]><link rel="stylesheet" href="http://static.web-standards.ru/styles/ie.css"><![endif]-->
 	<link rel="icon" sizes="16x16" href="http://static.web-standards.ru/images/favicon.ico">
 	<link rel="apple-touch-icon" href="http://static.web-standards.ru/images/favicon.png">
+	<link rel="yandex-tableau-widget" href="http://static.web-standards.ru/images/tableau.json">
 	<link rel="alternate" type="application/rss+xml" title="Все публикации" href="http://web-standards.ru/feed/">
 <?php	if ( is_category() ) : foreach ( get_the_category() as $cat ) : ?>
 	<link rel="alternate" type="application/rss+xml" title="<?php echo $cat->cat_name; ?>" href="http://web-standards.ru/category/<?php echo $cat->category_nicename; ?>/feed/">

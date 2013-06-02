@@ -1,0 +1,10 @@
+{
+	"version": "1",
+	"api_version": 1,
+
+	"layout": {
+		"logo": "http://static.web-standards.ru/images/tableau.png",
+		"color": "#E6F7FC",
+		"show_title": false
+	}
+}
