@@ -990,6 +990,27 @@ a {
 		color:#91DDF2;
 		}
 
+/* Books
+---------------------------------------- */
+.content-article .books {
+	padding:10px 0 0;
+	overflow:hidden;
+	}
+	.content-article .books li {
+		float:left;
+		width:255px;
+		height:255px;
+		}
+	.content-article .books li:before {
+		content:none;
+		}
+	.content-article .books img {
+		display:block;
+		margin:0 0 15px;
+		height:180px;
+		border:solid 2px #E4F2F7;
+		}
+
 /* Darkbox
 ---------------------------------------- */
 .darkbox {
