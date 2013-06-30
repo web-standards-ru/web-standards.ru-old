@@ -61,5 +61,6 @@
 <?php	if( is_home() ) : ?>
 				<div id="intro" class="content content-secondary">
                     <?php get_static( 'index-announce' ); ?>
+					<div class="logo"></div>
 				</div>
 <?php	endif; ?>

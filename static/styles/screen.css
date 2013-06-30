@@ -313,10 +313,19 @@ a {
 /* Intro
 ---------------------------------------- */
 #intro {
+	position:relative;
     min-height: 160px;
 	padding:10px 416px 0 18px;
-	background:url(../images/logo-main.png) 420px 60% no-repeat;
 	}
+	#intro .logo {
+		position:absolute;
+		top:30px;
+		right:50px;
+		width:300px;
+		height:140px;
+		background:url(../images/logo-main.png) no-repeat;
+		background:rgba(0, 0, 0, 0) url(../images/logo-main.svg) no-repeat;
+		}
 	#intro h2 {
 		margin:0 0 8px;
 		text-shadow:#102933 0 0 6px;
