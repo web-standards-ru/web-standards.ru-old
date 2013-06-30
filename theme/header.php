@@ -32,7 +32,7 @@
 		<div id="header" class="vcard">
 			<div class="logotype">
 <?php	if ( is_home() ) : ?>
-				<img src="http://static.web-standards.ru/images/logo-head.gif" alt="Логотип" class="logo">
+				<img src="http://static.web-standards.ru/images/logo-head.svg" alt="Логотип" class="logo">
 <?php	else : ?>
 				<a href="/"><img src="http://static.web-standards.ru/images/logo-head.svg" alt="Логотип" class="logo"></a>
 <?php	endif; ?>
