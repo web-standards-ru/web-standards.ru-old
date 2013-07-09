@@ -51,9 +51,11 @@
 
 #intro {
 	min-height:0;
-	background:none;
 	padding-right:18px;
 	}
+	#intro .logo {
+		display:none;
+		}
 
 #index #main {
 	width:auto;
