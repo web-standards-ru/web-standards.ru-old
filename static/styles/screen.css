@@ -1018,7 +1018,9 @@ a {
 	.content-article .books img {
 		display:block;
 		margin:0 0 15px 1px;
+		min-width:120px;
 		height:180px;
+		background:#EEE;
 		box-shadow:
 			1px 0 0 #CCC,
 			2px 0 0 #EEE,
