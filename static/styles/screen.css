@@ -1010,17 +1010,10 @@ a {
 		float:left;
 		width:255px;
 		height:280px;
+		background:url(../images/shadow-primary.png) 100% 146px no-repeat;
 		}
 	.content-article .books li:before {
-		position:absolute;
-		top:181px;
-		left:0;
-		margin:0;
-		width:170px;
-		height:1px;
-		box-shadow:0 0 30px rgba(0, 0, 0, 0.7);
-		clip:rect(-30px 230px 0 0);
-		content:'';
+		content:none;
 		}
 	.content-article .books img {
 		display:block;
