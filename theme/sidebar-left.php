@@ -19,6 +19,15 @@
 				</dl>
 <?php	endif; ?>
 				<dl class="module">
+					<dt>Страницы</dt>
+					<dd class="content content-secondary content-aside">
+						<ul>
+							<li><a href="/editors/">Представители сообщества</a></li>
+							<li><a href="/books/">Рекомендуемые книги</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="module">
 					<dt>Ссылки</dt>
 					<dd class="content content-secondary content-aside">
 						<ul>
