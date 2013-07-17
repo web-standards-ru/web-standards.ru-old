@@ -1006,18 +1006,39 @@ a {
 	overflow:hidden;
 	}
 	.content-article .books li {
+		position:relative;
 		float:left;
 		width:255px;
-		height:255px;
+		height:280px;
 		}
 	.content-article .books li:before {
-		content:none;
+		position:absolute;
+		top:181px;
+		left:0;
+		margin:0;
+		width:170px;
+		height:1px;
+		box-shadow:0 0 30px rgba(0, 0, 0, 0.7);
+		clip:rect(-30px 230px 0 0);
+		content:'';
 		}
 	.content-article .books img {
 		display:block;
-		margin:0 0 15px;
+		margin:0 0 15px 1px;
 		height:180px;
-		border:solid 2px #E4F2F7;
+		box-shadow:
+			1px 0 0 #CCC,
+			2px 0 0 #EEE,
+			3px 0 0 #DDD,
+			4px 0 0 #EEE,
+			5px 0 0 #DDD,
+			6px 0 0 #EEE,
+			7px 0 0 #DDD,
+			8px 0 0 #EEE,
+			9px 0 0 #DDD,
+			0 0 0 1px #CCC,
+			9px 0 0 1px #FFF,
+			10px 0 0 1px #DDD;
 		}
 
 /* Darkbox
