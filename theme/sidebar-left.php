@@ -46,14 +46,4 @@
 
 					</dd>
 				</dl>
-				<dl class="module">
-					<dt>RSS</dt>
-					<dd class="content content-secondary content-aside">
-						<ul>
-							<li><a href="/category/news/feed/">Новости</a></li>
-							<li><a href="/category/articles/feed/">Статьи</a></li>
-							<li><a href="/feed/">Всё сразу</a></li>
-						</ul>
-					</dd>
-				</dl>
 			</div>
