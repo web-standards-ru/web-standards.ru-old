@@ -234,7 +234,7 @@ function get_static( $key ) {
 
 // Tag Cloud Cleanup
 function wst_tag_cloud() {
-	$tags_list = wp_tag_cloud('format=array&number=0');
+	$tags_list = wp_tag_cloud('orderby=count&order=DESC&format=array&number=12');
 	$tags_out = '<ul>';
 	foreach ( $tags_list as $value ) {
 		$value = preg_replace('!(<a href=)\'(http://.*?)\'(.*?)>(.*?)</a>!is', "$1\"$2\" rel=\"tag\">$4</a>", $value);
