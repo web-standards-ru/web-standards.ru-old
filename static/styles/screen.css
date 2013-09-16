@@ -429,14 +429,6 @@ a {
 		margin-left:0;
 		background-position:50% 100%;
 		}
-	.heading-article p {
-		display:none;
-		}
-	.heading-article address {
-		display:block;
-		margin:0 0 6px;
-		font-size:11px;
-		}
 
 /* Archive List
 ---------------------------------------- */

@@ -4,9 +4,10 @@
 					<div id="main" class="content content-primary hentry">
 						<div class="heading-group heading-article">
 							<h1 class="heading entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-							<?php the_author(); ?>
-
-							<p><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_time('j F Y'); ?></abbr></p>
+							<p>
+								<?php the_author(); ?>,
+								<abbr class="published" title="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_time('j F Y'); ?></abbr>
+							</p>
 						</div>
 						<div class="content-article entry-content">
 							<?php the_content(); ?>
