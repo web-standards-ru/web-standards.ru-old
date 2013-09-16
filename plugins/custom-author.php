@@ -25,9 +25,9 @@
 		if( is_feed() ) {
 			$output = $author_first_name .' '. $author_last_name;
 		} else {
-			$output = '<address class="vcard"><a href="'. $author_url .'" class="user fn n url author"><span class="first-name">'.
+			$output = '<span class="vcard"><a href="'. $author_url .'" class="user fn n url author"><span class="first-name">'.
 				$author_first_name. '</span> <span class="last-name">'.
-				$author_last_name. '</span></a></address>';
+				$author_last_name. '</span></a></span>';
 		}
 		return $output;
 	}
