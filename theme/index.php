@@ -7,9 +7,10 @@
 						<li class="archive-item hentry">
 							<div class="heading-group heading-article">
 								<h2 class="heading entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-								<?php the_author(); ?>
-
-								<p><abbr class="published" title="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_time('j F'); ?></abbr></p>
+								<p>
+									<?php the_author(); ?>,
+									<abbr class="published" title="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_time('j F'); ?></abbr>
+								</p>
 							</div>
 							<div class="entry-summary content-article">
 								<?php the_excerpt(); ?>
