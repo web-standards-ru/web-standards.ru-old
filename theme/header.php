@@ -3,7 +3,6 @@
 <head>
 	<title><?php wp_title('—',true,'right'); ?><?php bloginfo('name'); ?></title>
 	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="description" content="Российское сообщество разработчиков «Веб-стандарты»">
 	<meta name="keywords" content="веб-стандарты, вст, wst, web standards, wsd, wstdays, web standards days, wsg, web standards group, wsg russia, xhtml, html, html5, css, css3, svg, canvas, микроформаты, microformats">
 	<meta name="viewport" content="width=device-width">
