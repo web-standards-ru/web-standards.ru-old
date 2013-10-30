@@ -35,7 +35,7 @@
 							<li><a href="http://vimeo.com/channels/wstdays">Видео на Vimeo</a></li>
 							<li><a href="http://vk.com/webstandards_ru">ВКонтакте</a></li>
 							<li><a href="http://fb.com/webstandardsru">Facebook</a></li>
-							<li><a href="https://plus.google.com/102454977730856836566/about">Google+</a></li>
+							<li><a href="https://plus.google.com/+Web-standardsRu/posts">Google+</a></li>
 						</ul>
 					</dd>
 				</dl>
