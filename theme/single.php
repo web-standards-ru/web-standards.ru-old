@@ -5,7 +5,7 @@
 						<div class="heading-group heading-article">
 							<h1 class="heading entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 							<p>
-								<?php the_author(); ?>,
+								<?php the_author(); ?>
 								<abbr class="published" title="<?php the_time('Y-m-d\TH:i:sP'); ?>"><?php the_time('j F Y'); ?></abbr>
 							</p>
 						</div>
