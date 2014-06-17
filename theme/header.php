@@ -44,7 +44,7 @@
 <?php	endif; ?>
 				<p class="note"><?php bloginfo('description'); ?></p>
 			</div>
-			<form action="http://yandex.ru/sitesearch" method="get" class="form form-secondary form-search">
+			<form action="http://yandex.ru/yandsearch" method="get" class="form form-secondary form-search">
 				<fieldset>
 					<legend>
 						<label for="search-text">Поиск</label>
