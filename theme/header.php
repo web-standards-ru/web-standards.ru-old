@@ -18,7 +18,7 @@
 <?php	endforeach; else : ?>
 	<link rel="alternate" type="application/rss+xml" title="Новости" href="http://web-standards.ru/category/news/feed/">
 <?php	endif; ?>
-	<link rel="edituri" type="application/rsd+xml" title="RSD" href="http://web-standards.ru/xmlrpc.?rsd">
+	<link rel="edituri" type="application/rsd+xml" title="RSD" href="http://web-standards.ru/xmlrpc.php?rsd">
 </head>
 <body id="<?php get_page_type() ?>">
 	<!--noindex-->
