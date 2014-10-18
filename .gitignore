@@ -2,3 +2,4 @@ wp-*
 *.php
 license.txt
 readme.html
+.DS_Store
