@@ -6,7 +6,7 @@ publish:
 	@rsync -rtz -O --chmod g+rw --delete --exclude '.DS_Store' static/ web-standards.ru:/var/www/web-standards.ru/www/htdocs/static/
 	@rsync -rtz -O --chmod g+rw --exclude '.DS_Store' plugins/ web-standards.ru:/var/www/web-standards.ru/www/htdocs/wp-content/plugins/
 	@rsync -rtz -O --chmod g+rw --exclude '.DS_Store' theme/ web-standards.ru:/var/www/web-standards.ru/www/htdocs/wp-content/themes/webstandards/
-	@rsync -rtz -O --chmod g+rw .htaccess google*.html yandex*.txt robots.txt humans.txt web-standards.ru:/var/www/web-standards.ru/www/htdocs/
+	@rsync -rtz -O --chmod g+rw .htaccess favicon.ico apple-touch-icon.png google*.html yandex*.txt robots.txt humans.txt web-standards.ru:/var/www/web-standards.ru/www/htdocs/
 	@echo 'Done.'
 
 install:

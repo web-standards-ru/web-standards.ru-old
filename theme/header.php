@@ -9,9 +9,8 @@
 	<link rel="stylesheet" href="http://static.web-standards.ru/styles/screen.css">
 	<link rel="stylesheet" href="http://static.web-standards.ru/styles/mobile.css" media="only screen and (max-width:640px)">
 	<!--[if lt IE 9]><link rel="stylesheet" href="http://static.web-standards.ru/styles/ie.css"><![endif]-->
-	<link rel="icon" sizes="16x16" href="http://static.web-standards.ru/images/favicon.ico">
-	<link rel="apple-touch-icon" href="http://static.web-standards.ru/images/favicon.png">
-	<link rel="yandex-tableau-widget" href="http://static.web-standards.ru/images/tableau.json">
+	<link rel="icon" sizes="16x16" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 	<link rel="alternate" type="application/rss+xml" title="Все публикации" href="http://web-standards.ru/feed/">
 <?php	if ( is_category() ) : foreach ( get_the_category() as $cat ) : ?>
 	<link rel="alternate" type="application/rss+xml" title="<?php echo $cat->cat_name; ?>" href="http://web-standards.ru/category/<?php echo $cat->category_nicename; ?>/feed/">
@@ -31,7 +30,7 @@
 		<div id="header" class="vcard">
 			<div class="logotype">
 <?php	if ( is_home() ) : ?>
-				<img src="http://static.web-standards.ru/images/logo-head.png" alt="Логотип" class="logo">
+				<img src="http://static.web-standards.ru/images/logo-head.svg" alt="Логотип" class="logo">
 <?php	else : ?>
 				<a href="/"><img src="http://static.web-standards.ru/images/logo-head.svg" alt="Логотип" class="logo"></a>
 <?php	endif; ?>
