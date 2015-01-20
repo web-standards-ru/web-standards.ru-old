@@ -1,0 +1,10 @@
+---
+layout: 'default'
+---
+
+<h1>News</h1>
+<ul>
+<% for post in @getCollection('news').toJSON(): %>
+	<li><a href="<%= post.url %>"><%= post.title %></a></li>
+<% end %>
+</ul>

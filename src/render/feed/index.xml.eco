@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>Веб-стандарты</title>
+	<link href="http://web-standards.ru/"/>
+	<link type="application/atom+xml" rel="self" href="http://web-standards.ru/"/>
+	<updated>DATE</updated>
+	<id>http://web-standards.ru/</id>
+	<author>
+		<name>Веб-стандарты</name>
+		<email>wst@web-standards.ru</email>
+	</author>
+	<entry>
+		<id>URL</id>
+		<link type="text/html" rel="alternate" href="URL"/>
+		<title>TITLE</title>
+		<published>DATE</published>
+		<updated>DATE</updated>
+		<author>
+			<name>NAME</name>
+		</author>
+		<content type="html" xml:base="https://dev.opera.com/"><![CDATA[CONTENT]]></content>
+	</entry>
+</feed>

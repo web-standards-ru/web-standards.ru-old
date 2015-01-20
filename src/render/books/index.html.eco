@@ -1,0 +1,10 @@
+---
+layout: 'default'
+---
+
+<h1>Books</h1>
+<ul>
+<% for post in @getCollection('books').toJSON(): %>
+	<li><a href="<%= post.url %>"><%= post.title %></a></li>
+<% end %>
+</ul>

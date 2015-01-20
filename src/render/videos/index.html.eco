@@ -1,0 +1,10 @@
+---
+layout: 'default'
+---
+
+<h1>Videos</h1>
+<ul>
+<% for post in @getCollection('videos').toJSON(): %>
+	<li><a href="<%= post.url %>"><%= post.title %></a></li>
+<% end %>
+</ul>
