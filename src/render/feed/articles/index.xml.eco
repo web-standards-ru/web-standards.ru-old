@@ -11,7 +11,7 @@
 	</author>
 <% for post in @getCollection('articles').toJSON().slice(0, 25): %>
 	<entry>
-		<id><%= post.url %></id>
+		<id><%= @site.url %><%= post.relativeOutDirPath %>/</id>
 		<link type="text/html" rel="alternate" href="<%= post.url %>"/>
 		<title><%= post.title %></title>
 		<published><%= post.date.toISOString() %></published>
