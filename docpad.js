@@ -1,18 +1,23 @@
 module.exports = {
 
 	templateData: {
+
 		site: {
 			title: 'Веб-стандарты',
 			description: 'Российское сообщество разработчиков',
-			url: 'http://web-standards.ru/'
+			url: 'http://web-standards.ru/',
+			email: 'wst@web-standards.ru'
 		}
+
 	},
 
 	plugins: {
+
 		grunt: {
 			writeAfter: false,
 			generateAfter: []
 		}
+
 	},
 
 	collections: {
@@ -20,17 +25,20 @@ module.exports = {
 		all: function() {
 			return this.getCollection('html').findAllLive({
 				relativeOutDirPath: {
-					$beginsWith: {
-						$or: [
-							'articles',
-							'books',
-							'news',
-							'videos'
-						]
-					}
+					$beginsWith: [
+						'articles',
+						'books',
+						'news',
+						'videos'
+					]
 				},
 				extension: 'md'
-			}, [{ date:-1 }])
+			}, [{ date:-1 }]).on('add', function(model){
+				model.setMetaDefaults({
+					author_name: 'Редакция «Веб-стандартов»',
+					author_url: 'http://web-standards.ru/editors/'
+				})
+			})
 		},
 
 		articles: function() {
@@ -83,7 +91,20 @@ module.exports = {
 					layout: 'video'
 				})
 			})
+		},
+
+		feeds: function() {
+			return this.getCollection('documents').findAllLive({
+				relativeOutDirPath: {
+					$beginsWith: 'feeds'
+				}
+			}).on('add', function(model){
+				model.setMetaDefaults({
+					layout: 'feed'
+				})
+			})
 		}
+
 	}
 
 }

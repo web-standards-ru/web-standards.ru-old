@@ -1,25 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Веб-стандарты</title>
-	<link href="<%= @site.url %>"/>
-	<link type="application/atom+xml" rel="self" href="<%= @site.url %>"/>
-	<updated><%= @site.date.toISOString() %></updated>
-	<id><%= @site.url %></id>
-	<author>
-		<name>Веб-стандарты</name>
-		<email>wst@web-standards.ru</email>
-	</author>
-<% for post in @getCollection('all').toJSON().slice(0, 25): %>
-	<entry>
-		<id><%= post.url %></id>
-		<link type="text/html" rel="alternate" href="<%= post.url %>"/>
-		<title><%= post.title %></title>
-		<published><%= post.date.toISOString() %></published>
-		<updated><%= post.mtime.toISOString() %></updated>
-		<author>
-			<name>Редакция «Веб-стандартов»</name>
-		</author>
-		<content type="html" xml:base="<%= @site.url %>"><![CDATA[<%- post.contentRenderedWithoutLayouts %>]]></content>
-	</entry>
-<% end %>
-</feed>
+---
+collection: 'all'
+---
