@@ -10,7 +10,7 @@
     "docpad-plugin-sass": "~2.7.3",
     "docpad-plugin-text": "~2.3.2",
     "grunt": "^0.4.5",
-    "grunt-autoprefixer": "^2.1.0",
+    "grunt-autoprefixer": "^2.2.0",
     "grunt-contrib-cssmin": "^0.11.0",
     "grunt-contrib-htmlmin": "^0.3.0",
     "load-grunt-tasks": "^2.0.0"
