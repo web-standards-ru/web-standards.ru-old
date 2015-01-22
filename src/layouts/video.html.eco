@@ -16,4 +16,4 @@ layout: 'default'
 	<iframe allowfullscreen src="//player.vimeo.com/video/<%- @document.vimeo %>"></iframe>
 <% end %>
 
-<%- @content %>
+<%= @content %>

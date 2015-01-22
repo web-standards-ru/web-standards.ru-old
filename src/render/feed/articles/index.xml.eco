@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Веб-стандарты</title>
-	<link href="http://web-standards.ru/"/>
-	<link type="application/atom+xml" rel="self" href="http://web-standards.ru/"/>
-	<updated>DATE</updated>
-	<id>http://web-standards.ru/</id>
+	<title>Веб-стандарты — Статьи</title>
+	<link href="<%= @site.url %>"/>
+	<link type="application/atom+xml" rel="self" href="<%= @site.url %><%= @document.relativeOutDirPath %>/"/>
+	<updated><%= @site.date.toISOString() %></updated>
+	<id><%= @site.url %></id>
 	<author>
 		<name>Веб-стандарты</name>
 		<email>wst@web-standards.ru</email>
 	</author>
+<% for post in @getCollection('articles').toJSON().slice(0, 25): %>
 	<entry>
-		<id>URL</id>
-		<link type="text/html" rel="alternate" href="URL"/>
-		<title>TITLE</title>
-		<published>DATE</published>
-		<updated>DATE</updated>
+		<id><%= post.url %></id>
+		<link type="text/html" rel="alternate" href="<%= post.url %>"/>
+		<title><%= post.title %></title>
+		<published><%= post.date.toISOString() %></published>
+		<updated><%= post.mtime.toISOString() %></updated>
 		<author>
-			<name>NAME</name>
+			<name>Редакция «Веб-стандартов»</name>
 		</author>
-		<content type="html" xml:base="https://dev.opera.com/"><![CDATA[CONTENT]]></content>
+		<content type="html" xml:base="<%= @site.url %>"><![CDATA[<%- post.contentRenderedWithoutLayouts %>]]></content>
 	</entry>
+<% end %>
 </feed>

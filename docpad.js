@@ -4,7 +4,7 @@ module.exports = {
 		site: {
 			title: 'Веб-стандарты',
 			description: 'Российское сообщество разработчиков',
-			url: 'http://web-standards.ru'
+			url: 'http://web-standards.ru/'
 		}
 	},
 
@@ -16,16 +16,6 @@ module.exports = {
 	},
 
 	collections: {
-		news: function() {
-			return this.getCollection('html').findAllLive({
-				relativeOutDirPath: 'news',
-				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model){
-				model.setMetaDefaults({
-					layout: 'news'
-				})
-			})
-		},
 		articles: function() {
 			return this.getCollection('html').findAllLive({
 				relativeOutDirPath: /^articles\//,
@@ -33,16 +23,6 @@ module.exports = {
 			}, [{ date:-1 }]).on('add', function(model){
 				model.setMetaDefaults({
 					layout: 'article'
-				})
-			})
-		},
-		videos: function() {
-			return this.getCollection('html').findAllLive({
-				relativeOutDirPath: 'videos',
-				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model){
-				model.setMetaDefaults({
-					layout: 'video'
 				})
 			})
 		},
@@ -55,6 +35,32 @@ module.exports = {
 					layout: 'book'
 				})
 			})
+		},
+		news: function() {
+			return this.getCollection('html').findAllLive({
+				relativeOutDirPath: /^news/,
+				extension: 'md'
+			}, [{ date:-1 }]).on('add', function(model){
+				model.setMetaDefaults({
+					layout: 'news'
+				})
+			})
+		},
+		videos: function() {
+			return this.getCollection('html').findAllLive({
+				relativeOutDirPath: /^videos/,
+				extension: 'md'
+			}, [{ date:-1 }]).on('add', function(model){
+				model.setMetaDefaults({
+					layout: 'video'
+				})
+			})
+		},
+		all: function() {
+			return this.getCollection('html').findAllLive({
+				relativeOutDirPath: /(^articles\/|^books\/|^news|^videos)/,
+				extension: 'md'
+			}, [{ date:-1 }])
 		}
 	}
 
