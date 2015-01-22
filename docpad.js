@@ -16,9 +16,28 @@ module.exports = {
 	},
 
 	collections: {
+
+		all: function() {
+			return this.getCollection('html').findAllLive({
+				relativeOutDirPath: {
+					$beginsWith: {
+						$or: [
+							'articles',
+							'books',
+							'news',
+							'videos'
+						]
+					}
+				},
+				extension: 'md'
+			}, [{ date:-1 }])
+		},
+
 		articles: function() {
 			return this.getCollection('html').findAllLive({
-				relativeOutDirPath: /^articles\//,
+				relativeOutDirPath: {
+					$beginsWith: 'articles'
+				},
 				extension: 'md'
 			}, [{ date:-1 }]).on('add', function(model){
 				model.setMetaDefaults({
@@ -26,9 +45,12 @@ module.exports = {
 				})
 			})
 		},
+
 		books: function() {
 			return this.getCollection('html').findAllLive({
-				relativeOutDirPath: /^books\//,
+				relativeOutDirPath: {
+					$beginsWith: 'books'
+				},
 				extension: 'md'
 			}, [{ date:-1 }]).on('add', function(model){
 				model.setMetaDefaults({
@@ -36,9 +58,12 @@ module.exports = {
 				})
 			})
 		},
+
 		news: function() {
 			return this.getCollection('html').findAllLive({
-				relativeOutDirPath: /^news/,
+				relativeOutDirPath: {
+					$beginsWith: 'news'
+				},
 				extension: 'md'
 			}, [{ date:-1 }]).on('add', function(model){
 				model.setMetaDefaults({
@@ -46,21 +71,18 @@ module.exports = {
 				})
 			})
 		},
+
 		videos: function() {
 			return this.getCollection('html').findAllLive({
-				relativeOutDirPath: /^videos/,
+				relativeOutDirPath: {
+					$beginsWith: 'videos'
+				},
 				extension: 'md'
 			}, [{ date:-1 }]).on('add', function(model){
 				model.setMetaDefaults({
 					layout: 'video'
 				})
 			})
-		},
-		all: function() {
-			return this.getCollection('html').findAllLive({
-				relativeOutDirPath: /(^articles\/|^books\/|^news|^videos)/,
-				extension: 'md'
-			}, [{ date:-1 }])
 		}
 	}
 
