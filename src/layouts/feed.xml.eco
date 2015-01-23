@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title><%= @site.title %><% if @document.title: %> — <%= @document.title %><% end %></title>
+	<title><%= @feedTitle() %></title>
 	<link href="<%= @site.url %>"/>
 	<link type="application/atom+xml" rel="self" href="<%= @site.url.slice(0, -1) %><%= @document.url %>"/>
 	<updated><%= @site.date.toISOString() %></updated>

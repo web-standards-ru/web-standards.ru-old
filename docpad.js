@@ -7,6 +7,22 @@ module.exports = {
 			description: 'Российское сообщество разработчиков',
 			url: 'http://web-standards.ru/',
 			email: 'wst@web-standards.ru'
+		},
+
+		htmlTitle: function() {
+			if (this.document.title) {
+				return this.document.title + ' — ' + this.site.title;
+			} else {
+				return this.site.title;
+			}
+		},
+
+		feedTitle: function() {
+			if (this.document.title) {
+				return this.site.title + ' — ' + this.document.title;
+			} else {
+				return this.site.title;
+			}
 		}
 
 	},
@@ -33,7 +49,7 @@ module.exports = {
 					]
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model){
+			}, [{ date:-1 }]).on('add', function(model) {
 				model.setMetaDefaults({
 					author_name: 'Редакция «Веб-стандартов»',
 					author_url: 'http://web-standards.ru/editors/'
@@ -47,7 +63,7 @@ module.exports = {
 					$beginsWith: 'articles'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model){
+			}, [{ date:-1 }]).on('add', function(model) {
 				model.setMetaDefaults({
 					layout: 'article'
 				})
@@ -60,7 +76,7 @@ module.exports = {
 					$beginsWith: 'books'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model){
+			}, [{ date:-1 }]).on('add', function(model) {
 				model.setMetaDefaults({
 					layout: 'book'
 				})
@@ -73,7 +89,7 @@ module.exports = {
 					$beginsWith: 'news'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model){
+			}, [{ date:-1 }]).on('add', function(model) {
 				model.setMetaDefaults({
 					layout: 'news'
 				})
@@ -86,7 +102,7 @@ module.exports = {
 					$beginsWith: 'videos'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model){
+			}, [{ date:-1 }]).on('add', function(model) {
 				model.setMetaDefaults({
 					layout: 'video'
 				})
@@ -98,7 +114,7 @@ module.exports = {
 				relativeOutDirPath: {
 					$beginsWith: 'feed'
 				}
-			}).on('add', function(model){
+			}).on('add', function(model) {
 				model.setMetaDefaults({
 					layout: 'feed'
 				})
