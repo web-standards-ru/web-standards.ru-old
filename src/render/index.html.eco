@@ -1,5 +1,5 @@
 ---
-layout: 'default'
+layout: 'html'
 ---
 
 <h2><a href="/news/">News</a> <a href="/feed/news/index.xml">RSS</a></h2>
