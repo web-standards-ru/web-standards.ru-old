@@ -18,7 +18,7 @@
 		<updated><%= post.date.toISOString() %></updated>
 		<author>
 			<name><%= post.author_name %></name>
-			<url><%= post.author_url %></url>
+			<uri><%= post.author_url %></uri>
 		</author>
 		<content type="html" xml:base="<%= @site.url %>"><![CDATA[<%- post.contentRenderedWithoutLayouts %>]]></content>
 	</entry>
