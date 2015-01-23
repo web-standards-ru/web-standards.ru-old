@@ -96,7 +96,7 @@ module.exports = {
 		feeds: function() {
 			return this.getCollection('documents').findAllLive({
 				relativeOutDirPath: {
-					$beginsWith: 'feeds'
+					$beginsWith: 'feed'
 				}
 			}).on('add', function(model){
 				model.setMetaDefaults({
