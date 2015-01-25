@@ -4,16 +4,4 @@ layout: 'html'
 
 <h1><%= @document.title %></h1>
 
-<p>
-	<% for author in @document.authors: %>
-		<%= author %>
-	<% end %>
-</p>
-
-<% if @document.youtube: %>
-	<iframe allowfullscreen src="//youtube.com/embed/<%- @document.youtube %>?controls=2&amp;modestbranding=1&amp;theme=light&amp;showinfo=0"></iframe>
-<% else: %>
-	<iframe allowfullscreen src="//player.vimeo.com/video/<%- @document.vimeo %>"></iframe>
-<% end %>
-
-<%= @content %>
+<iframe allowfullscreen src="//youtube.com/embed/<%- @document.youtube %>?controls=2&amp;modestbranding=1&amp;theme=light&amp;showinfo=0"></iframe>
