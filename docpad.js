@@ -39,11 +39,24 @@ module.exports = {
 	events: {
 		renderBefore: function() {
 			return this.docpad.getCollection('html').forEach(function(page) {
+
+				// archive/books.html — books/
+				// news/000.html — news/000/
+				// videos/xxx.html — videos/xxx/
+
 				var pageName = page.attributes.basename,
-					oldPage = 'archive/' + pageName,
-					newPage = pageName + '/index',
-					newPath = page.get('outPath').replace(oldPage, newPage),
-					newUrl = page.get('url').replace(oldPage, newPage);
+					newPath, newUrl;
+
+				newPath = page.get('outPath')
+					.replace('archive/' + pageName + '.html', pageName + '/index.html')
+					.replace('news/' + pageName + '.html', 'news/' + pageName + '/index.html')
+					.replace('videos/' + pageName + '.html', 'videos/' + pageName + '/index.html');
+
+				newUrl = page.get('url')
+					.replace('archive/' + pageName + '.html', pageName + '/')
+					.replace('news/' + pageName + '.html', 'news/' + pageName + '/')
+					.replace('videos/' + pageName + '.html', 'videos/' + pageName + '/')
+					.replace('/index.html', '/');
 
 				page.set('outPath', newPath);
 				page.setUrl(newUrl);
@@ -66,8 +79,8 @@ module.exports = {
 					]
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model) {
-				model.setMetaDefaults({
+			}, [{ date:-1 }]).on('add', function(document) {
+				document.setMetaDefaults({
 					author_name: 'Редакция «Веб-стандартов»',
 					author_url: 'http://web-standards.ru/editors/'
 				})
@@ -80,8 +93,8 @@ module.exports = {
 					$beginsWith: 'articles'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model) {
-				model.setMetaDefaults({
+			}, [{ date:-1 }]).on('add', function(document) {
+				document.setMeta({
 					layout: 'article'
 				})
 			})
@@ -93,8 +106,8 @@ module.exports = {
 					$beginsWith: 'books'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model) {
-				model.setMetaDefaults({
+			}, [{ date:-1 }]).on('add', function(document) {
+				document.setMeta({
 					layout: 'book'
 				})
 			})
@@ -106,8 +119,8 @@ module.exports = {
 					$beginsWith: 'news'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model) {
-				model.setMetaDefaults({
+			}, [{ date:-1 }]).on('add', function(document) {
+				document.setMeta({
 					layout: 'news'
 				})
 			})
@@ -119,8 +132,8 @@ module.exports = {
 					$beginsWith: 'videos'
 				},
 				extension: 'md'
-			}, [{ date:-1 }]).on('add', function(model) {
-				model.setMetaDefaults({
+			}, [{ date:-1 }]).on('add', function(document) {
+				document.setMeta({
 					layout: 'video'
 				})
 			})
@@ -131,8 +144,8 @@ module.exports = {
 				relativeOutDirPath: {
 					$beginsWith: 'feed'
 				}
-			}).on('add', function(model) {
-				model.setMetaDefaults({
+			}).on('add', function(document) {
+				document.setMeta({
 					layout: 'feed'
 				})
 			})
