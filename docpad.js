@@ -36,6 +36,23 @@ module.exports = {
 
 	},
 
+	events: {
+		renderBefore: function() {
+			return this.docpad.getCollection('html').forEach(function(page) {
+				var pageName = page.attributes.basename,
+					oldPage = 'archive/' + pageName,
+					newPage = pageName + '/index',
+					newPath = page.get('outPath').replace(oldPage, newPage),
+					newUrl = page.get('url').replace(oldPage, newPage);
+
+				page.set('outPath', newPath);
+				page.setUrl(newUrl);
+
+				return page;
+			})
+		}
+	},
+
 	collections: {
 
 		all: function() {
