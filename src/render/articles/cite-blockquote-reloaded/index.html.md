@@ -60,7 +60,7 @@ _(Добавлено 6.11.13, прим. редактора.)_ В ответ н
 
 ## Изменения в определении `<cite>`
 
-> [Элемент `<cite>](http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element)` [представляет](http://www.w3.org/html/wg/drafts/html/master/dom.html#represents) отсылку к оригинальной работе. Он **должен** включать название работы или имя автора (персоналию, группу лиц или организацию), или ссылку, которые **могут быть** в представлены сокращенном виде в соответствии с соглашениями, принятыми при цитировании.
+> [Элемент `<cite>`](http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element) [представляет](http://www.w3.org/html/wg/drafts/html/master/dom.html#represents) отсылку к оригинальной работе. Он **должен** включать название работы или имя автора (персоналию, группу лиц или организацию), или ссылку, которые **могут быть** в представлены сокращенном виде в соответствии с соглашениями, принятыми при цитировании.
 > [4.51 the Cite element](http://www.w3.org/html/wg/drafts/html/master/text-level-semantics.html#the-cite-element), Роберт Бержон и соавторы, 2013
 
 ### Что изменения в `<cite>` значат для разработчиков
