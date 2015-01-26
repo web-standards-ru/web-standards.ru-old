@@ -45,25 +45,24 @@ module.exports = {
 
 	events: {
 		renderBefore: function() {
-			return this.docpad.getCollection('html').forEach(function(page) {
-
-				// archive/books.html — books/
-				// news/000.html — news/000/
-				// videos/xxx.html — videos/xxx/
+			return this.docpad.getCollection('documents').forEach(function(page) {
 
 				var pageName = page.attributes.basename,
 					newPath, newUrl;
 
 				newPath = page.get('outPath')
-					.replace('archive/' + pageName + '.html', pageName + '/index.html')
-					.replace('news/' + pageName + '.html', 'news/' + pageName + '/index.html')
-					.replace('videos/' + pageName + '.html', 'videos/' + pageName + '/index.html');
+					// feed/foo.xml — feed/foo/index.xml
+					.replace(/feed\/((?!index\.)[a-z]+)\.xml/, 'feed/$1/index.xml')
+					// archive/foo.html — foo/index.html
+					.replace(/archive\/([a-z]+)\.html/, '$1/index.html')
+					// foo/bar.html — foo/bar/index.html
+					.replace(/([a-z]+)\/((?!index\.)[a-z0-9_\-]+)\.html/, '$1/$2/index.html');
 
 				newUrl = page.get('url')
-					.replace('archive/' + pageName + '.html', pageName + '/')
-					.replace('news/' + pageName + '.html', 'news/' + pageName + '/')
-					.replace('videos/' + pageName + '.html', 'videos/' + pageName + '/')
-					.replace('/index.html', '/');
+					// foo/bar.html — foo/bar/index.html
+					.replace(/([a-z]+)\/((?!index\.)[a-z0-9_\-]+)\.html/, '$1/$2/')
+					// foo/index.html — foo/
+					.replace(/(.*)index\.html/, '$1');
 
 				page.set('outPath', newPath);
 				page.setUrl(newUrl);
