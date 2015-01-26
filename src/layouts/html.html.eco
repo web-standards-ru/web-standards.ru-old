@@ -6,8 +6,11 @@
 </head>
 <body>
 	<header>
+<% if @index(@document): %>
 		<h1><%= @site.title %></h1>
+<% else: %>
 		<p><a href="/"><%= @site.title %></a></p>
+<% end %>
 		<p><%= @site.description %></p>
 	</header>
 	<%- @content %>

@@ -1,5 +1,6 @@
 var moment = require('moment');
 	moment.locale('ru');
+var marked = require('marked');
 
 module.exports = {
 
@@ -30,6 +31,10 @@ module.exports = {
 
 		date: function(date, format) {
 			return moment(date).format(format || 'D MMMM YYYY');
+		},
+
+		index: function(document) {
+			return document.url == '/' ? true : false;
 		}
 
 	},
