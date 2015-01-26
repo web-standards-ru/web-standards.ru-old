@@ -2,8 +2,12 @@
 layout: 'html'
 ---
 
-<h1><a href="<%= @document.link %>"><%= @document.title %></a></h1>
+<h1><%= @document.title %></h1>
 
-<img src="<%- @document.url.replace('index.html', 'cover.jpg') %>" alt="<%= @document.title %>">
+<p><%= @date(@document.date) %></p>
+
+<a href="<%= @document.link %>">
+	<img src="<%- @document.url %>cover.jpg" alt="<%= @document.title %>">
+</a>
 
 <%- @content %>

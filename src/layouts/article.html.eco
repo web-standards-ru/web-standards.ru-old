@@ -4,4 +4,6 @@ layout: 'html'
 
 <h1><%= @document.title %></h1>
 
+<p><%= @date(@document.date) %></p>
+
 <%- @content %>

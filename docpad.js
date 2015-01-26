@@ -1,3 +1,6 @@
+var moment = require('moment');
+	moment.locale('ru');
+
 module.exports = {
 
 	templateData: {
@@ -23,6 +26,10 @@ module.exports = {
 			} else {
 				return this.site.title;
 			}
+		},
+
+		date: function(date, format) {
+			return moment(date).format(format || 'D MMMM YYYY');
 		}
 
 	},
