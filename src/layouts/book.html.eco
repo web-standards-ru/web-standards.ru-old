@@ -4,7 +4,7 @@ layout: 'html'
 
 <h1><%- @inlineMarkdown(@document.title) %></h1>
 
-<p><%= @date(@document.date) %></p>
+<p><%= @getDate(@document.date) %></p>
 
 <a href="<%= @document.link %>">
 	<img src="<%- @document.url %>cover.jpg" alt="<%= @document.title %>">

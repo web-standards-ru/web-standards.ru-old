@@ -4,6 +4,6 @@ layout: 'html'
 
 <h1><%- @inlineMarkdown(@document.title) %></h1>
 
-<p><%= @date(@document.date) %></p>
+<p><%= @getDate(@document.date) %></p>
 
 <iframe allowfullscreen src="//youtube.com/embed/<%- @document.youtube %>?controls=2&amp;modestbranding=1&amp;theme=light&amp;showinfo=0"></iframe>

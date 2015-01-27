@@ -31,11 +31,11 @@ module.exports = {
 			return siteTitle + (documentTitle ?  ' — '  + this.stripMarkdown(documentTitle) : '');
 		},
 
-		date: function(date, format) {
+		getDate: function(date, format) {
 			return moment(date).format(format || 'D MMMM YYYY');
 		},
 
-		index: function(document) {
+		isIndex: function(document) {
 			return document.url == '/' ? true : false;
 		},
 

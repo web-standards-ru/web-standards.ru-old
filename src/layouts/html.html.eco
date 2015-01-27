@@ -6,7 +6,7 @@
 </head>
 <body>
 	<header>
-<% if @index(@document): %>
+<% if @isIndex(@document): %>
 		<h1><%= @site.title %></h1>
 <% else: %>
 		<p><a href="/"><%= @site.title %></a></p>
@@ -15,7 +15,7 @@
 	</header>
 	<%- @content %>
 	<footer>
-		<p>Веб-стандарты © 2006—<%= @date(@site.date, 'YYYY') %></p>
+		<p>Веб-стандарты © 2006—<%= @getDate(@site.date, 'YYYY') %></p>
 	</footer>
 </body>
 </html>
