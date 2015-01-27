@@ -1,10 +1,11 @@
 ---
+title: 'Новости'
 layout: 'html'
 ---
 
-<h1>News</h1>
+<h1><%= @document.title %> <a href="/feed/news/">RSS</a></h1>
 <ul>
 <% for post in @getCollection('news').toJSON(): %>
-	<li><a href="<%= post.url %>"><%= post.title %></a></li>
+	<li><a href="<%= post.url %>"><%= @inlineMarkdown(post.title) %></a></li>
 <% end %>
 </ul>

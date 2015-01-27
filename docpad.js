@@ -1,6 +1,10 @@
 var moment = require('moment');
 	moment.locale('ru');
+
 var marked = require('marked');
+
+var stripMarkdown = require('strip-markdown');
+var mdast = require('mdast').use(stripMarkdown);
 
 module.exports = {
 
@@ -14,19 +18,17 @@ module.exports = {
 		},
 
 		htmlTitle: function() {
-			if (this.document.title) {
-				return this.document.title + ' — ' + this.site.title;
-			} else {
-				return this.site.title;
-			}
+			var siteTitle = this.site.title,
+				documentTitle = this.document.title;
+
+			return (documentTitle ? this.stripMarkdown(documentTitle) + ' — ' : '') + siteTitle;
 		},
 
 		feedTitle: function() {
-			if (this.document.title) {
-				return this.site.title + ' — ' + this.document.title;
-			} else {
-				return this.site.title;
-			}
+			var siteTitle = this.site.title,
+				documentTitle = this.document.title;
+
+			return siteTitle + (documentTitle ?  ' — '  + this.stripMarkdown(documentTitle) : '');
 		},
 
 		date: function(date, format) {
@@ -35,6 +37,18 @@ module.exports = {
 
 		index: function(document) {
 			return document.url == '/' ? true : false;
+		},
+
+		inlineMarkdown: function(string) {
+			var renderer = new marked.Renderer();
+			renderer.paragraph = function(text) {
+				return text;
+			}
+			return marked(string, { renderer: renderer });
+		},
+
+		stripMarkdown: function(string) {
+			return mdast.stringify(mdast.parse(string));
 		}
 
 	},

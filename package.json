@@ -14,6 +14,8 @@
     "grunt-contrib-htmlmin": "^0.3.0",
     "load-grunt-tasks": "^3.0.0",
     "marked": "^0.3.3",
-    "moment": "^2.9.0"
+    "mdast": "^0.1.12",
+    "moment": "^2.9.0",
+    "strip-markdown": "^0.1.1"
   }
 }
