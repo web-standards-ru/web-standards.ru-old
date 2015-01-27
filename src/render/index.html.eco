@@ -5,27 +5,27 @@ layout: 'html'
 <h2><a href="/news/">News</a> <a href="/feed/news/">RSS</a></h2>
 <ul>
 <% for post in @getCollection('news').toJSON().slice(0, 25): %>
-	<li><a href="<%= post.url %>"><%= @inlineMarkdown(post.title) %></a></li>
+	<li><a href="<%= post.url %>"><%- @inlineMarkdown(post.title) %></a></li>
 <% end %>
 </ul>
 
 <h2><a href="/articles/">Articles</a> <a href="/feed/articles/">RSS</a></h2>
 <ul>
 <% for post in @getCollection('articles').toJSON().slice(0, 25): %>
-	<li><a href="<%= post.url %>"><%= @inlineMarkdown(post.title) %></a></li>
+	<li><a href="<%= post.url %>"><%- @inlineMarkdown(post.title) %></a></li>
 <% end %>
 </ul>
 
 <h2><a href="/videos/">Videos</a> <a href="/feed/videos/">RSS</a></h2>
 <ul>
 <% for post in @getCollection('videos').toJSON().slice(0, 25): %>
-	<li><a href="<%= post.url %>"><%= @inlineMarkdown(post.title) %></a></li>
+	<li><a href="<%= post.url %>"><%- @inlineMarkdown(post.title) %></a></li>
 <% end %>
 </ul>
 
 <h2><a href="/books/">Books</a> <a href="/feed/books/">RSS</a></h2>
 <ul>
 <% for post in @getCollection('books').toJSON().slice(0, 25): %>
-	<li><a href="<%= post.url %>"><%= @inlineMarkdown(post.title) %></a></li>
+	<li><a href="<%= post.url %>"><%- @inlineMarkdown(post.title) %></a></li>
 <% end %>
 </ul>
