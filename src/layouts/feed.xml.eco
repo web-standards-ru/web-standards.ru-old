@@ -13,7 +13,7 @@
 	<entry>
 		<id><%= @site.url.slice(0, -1) %><%= post.url %></id>
 		<link type="text/html" rel="alternate" href="<%= @site.url.slice(0, -1) %><%= post.url %>"/>
-		<title><%= @stripMarkdown(post.title) %></title>
+		<title><%= @sanitizeHTML(post.title) %></title>
 		<published><%= post.date.toISOString() %></published>
 		<updated><%= post.date.toISOString() %></updated>
 		<author>

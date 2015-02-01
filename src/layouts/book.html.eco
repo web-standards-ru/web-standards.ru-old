@@ -2,7 +2,7 @@
 layout: 'html'
 ---
 
-<h1><%- @inlineMarkdown(@document.title) %></h1>
+<h1><%- @document.title %></h1>
 
 <p><%= @getDate(@document.date) %></p>
 

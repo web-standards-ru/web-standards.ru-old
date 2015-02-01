@@ -1,10 +1,7 @@
 var moment = require('moment');
 	moment.locale('ru');
-
 var marked = require('marked');
-
-var stripMarkdown = require('strip-markdown');
-var mdast = require('mdast').use(stripMarkdown);
+var sanitizer = require('sanitize-html');
 
 module.exports = {
 
@@ -20,15 +17,13 @@ module.exports = {
 		htmlTitle: function() {
 			var siteTitle = this.site.title,
 				documentTitle = this.document.title;
-
-			return (documentTitle ? this.stripMarkdown(documentTitle) + ' — ' : '') + siteTitle;
+			return (documentTitle ? this.sanitizeHTML(documentTitle) + ' — ' : '') + siteTitle;
 		},
 
 		feedTitle: function() {
 			var siteTitle = this.site.title,
 				documentTitle = this.document.title;
-
-			return siteTitle + (documentTitle ?  ' — '  + this.stripMarkdown(documentTitle) : '');
+			return siteTitle + (documentTitle ?  ' — '  + documentTitle : '');
 		},
 
 		getDate: function(date, format) {
@@ -39,35 +34,25 @@ module.exports = {
 			return document.url == '/' ? true : false;
 		},
 
-		inlineMarkdown: function(string) {
-			var renderer = new marked.Renderer();
-			renderer.paragraph = function(text) {
-				return text;
-			}
-			return marked(string, { renderer: renderer });
-		},
-
-		stripMarkdown: function(string) {
-			return mdast.stringify(mdast.parse(string));
+		sanitizeHTML: function(title) {
+			return sanitizer(title, {
+				allowedTags: []
+			})
 		}
 
 	},
 
 	plugins: {
-
 		grunt: {
 			writeAfter: false,
 			generateAfter: []
 		}
-
 	},
 
 	events: {
 		renderBefore: function() {
 			return this.docpad.getCollection('documents').forEach(function(page) {
-
-				var pageName = page.attributes.basename,
-					newPath, newUrl;
+				var newPath, newUrl;
 
 				newPath = page.get('outPath')
 					// feed/foo.xml — feed/foo/index.xml
@@ -105,9 +90,20 @@ module.exports = {
 				},
 				extension: 'md'
 			}, [{ date:-1 }]).on('add', function(document) {
+				var renderer = new marked.Renderer(),
+					oldTitle = document.get('title'),
+					newTitle;
+				renderer.paragraph = function(text) {
+					return text;
+				}
+				newTitle = marked(oldTitle, {
+					renderer: renderer
+				});
 				document.setMetaDefaults({
 					author_name: 'Редакция «Веб-стандартов»',
 					author_url: 'http://web-standards.ru/editors/'
+				}).set({
+					title: newTitle
 				})
 			})
 		},
