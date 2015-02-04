@@ -1,11 +1,8 @@
 ---
 date: 2012-10-13
 title: 'Многослойный CSS'
-subtitle: 'Три слоя организации CSS для удобной командной работы над стилями. Рассказ об авторской методике и её сравнение с существующими: от OOCSS и SMACSS до БЭМа'
-authors:
-- 'Роберт Харитонов'
-tags:
-- css
-- bem
+youtube: -oUZYm4sl94
 vimeo: 60204943
+pres: http://webstandardsdays.ru/2012/10/13/pres/multilayer-css/
+authors: Роберт Харитонов
 ---

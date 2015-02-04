@@ -1,11 +1,9 @@
 ---
-date: 2010-06-22 15:30:00+04:00
-title: 'Обзор отладчиков для веб-разработки. Сравнение Firebug, IE Developer Toolbar, Opera Dragonfly и WebKit Web Inspector'
-authors:
-- 'Михаил Баранов'
-tags:
-- devtools
-- browsers
-vimeo: 17255088
+date: 2010-06-22
+title: 'Обзор отладчиков для веб-разработки'
 youtube: hIINHqnVWL0
+vimeo: 17255088
+time: 31:28
+pres: http://webstandardsdays.ru/2010/06/26/pres/devtools-review.pdf
+authors: Михаил Баранов
 ---

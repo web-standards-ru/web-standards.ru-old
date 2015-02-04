@@ -1,10 +1,9 @@
 ---
-date: 2013-04-22
+date: 2014-04-23
 title: 'Документирование вёрстки по-взрослому'
-authors:
-- 'Роберт Харитонов'
-tags:
-- documentation
-vimeo: 75137401
 youtube: 3HNW5Bru0Ws
+vimeo: 75137401
+time: 45:38
+pres: http://webstandardsdays.ru/2014/04/23/pres/source-docs/
+authors: Роберт Харитонов
 ---

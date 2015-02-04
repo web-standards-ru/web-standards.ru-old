@@ -1,11 +1,8 @@
 ---
 date: 2011-04-26
 title: 'БЭМ'
-authors:
-- '[Сергей Бережной](https://twitter.com/veged)'
-- '[Виталий Харисов](https://twitter.com/harisov)'
-tags:
-- bem
-- yandex
+youtube: hno_XFuF_ZI
 vimeo: 27267889
+pres: http://webstandardsdays.ru/2011/04/26/pres/bem-intro.pdf
+authors: Сергей Бережной, Виталий Харисов
 ---

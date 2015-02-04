@@ -1,13 +1,9 @@
 ---
-date: 2010-06-22 12:00:00+04:00
-title: 'CSS3: будущее механизмов раскладки. Обзор и анализ черновиков Grid, Flexbox и Template Layout'
-authors:
-- 'Вячеслав Олиянчук'
-tags:
-- css
-- flexbox
-- grid
-- layout
-vimeo: 17494685
+date: 2010-06-22
+title: 'CSS3: Будущее механизмов раскладки'
 youtube: ZEd7bEqe6iI
+vimeo: 17494685
+time: 53:12
+pres: http://webstandardsdays.ru/2010/06/26/pres/css3-layout-review/
+authors: Вячеслав Олиянчук
 ---

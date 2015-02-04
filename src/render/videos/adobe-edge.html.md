@@ -1,11 +1,9 @@
 ---
-date: 2011-10-29 10:40:00+03:00
+date: 2011-10-29
 title: 'Adobe Edge. Веб-анимация по стандартам'
-authors:
-- '[Андрей Головнёв](https://twitter.com/golovnev)'
-tags:
-- adobe
-- animation
-vimeo: 33148794
 youtube: yQwMBlptTmQ
+vimeo: 33148794
+time: 24:40
+pres: http://webstandardsdays.ru/2011/10/29/pres/adobe-edge/
+authors: Андрей Головнёв
 ---

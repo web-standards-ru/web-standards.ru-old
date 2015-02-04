@@ -1,10 +1,9 @@
 ---
-date: 2011-12-13 17:00:00+04:00
+date: 2011-12-13
 title: 'Причеши свой код. Правила хорошего тона в CSS'
-authors:
-- 'Вячеслав Олиянчук'
-tags:
-- css
-vimeo: 34212051
 youtube: dwdP11bOwq8
+vimeo: 34212051
+time: 32:53
+pres: http://webstandardsdays.ru/2011/12/13/pres/csscomb/
+authors: Вячеслав Олиянчук
 ---

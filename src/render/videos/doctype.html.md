@@ -1,11 +1,9 @@
 ---
-date: 2010-12-16 18:00:00+04:00
+date: 2010-12-16
 title: 'Доктайп. Точка'
-authors:
-- '[Вадим Макеев](http://pepelsbey.net/)'
-tags:
-- doctype
-- html
-vimeo: 19072506
 youtube: UFrVTpjU02M
+vimeo: 19072506
+time: 16:42
+pres: http://webstandardsdays.ru/2010/12/16/pres/doctype/
+authors: Вадим Макеев
 ---

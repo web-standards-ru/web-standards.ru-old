@@ -1,10 +1,8 @@
 ---
-date: 2010-06-22 14:20:00+04:00
-title: 'Презентация проекта «Веб-стандарты»'
-authors:
-- '[Вадим Макеев](http://pepelsbey.net/)'
-tags:
-- wst
-vimeo: 17256050
+date: 2010-06-22
+title: 'Веб-стандарты. Презентация проекта'
 youtube: ubZomDECNcY
+vimeo: 17256050
+time: 06:39
+authors: Вадим Макеев
 ---

@@ -1,11 +1,9 @@
 ---
-date: 2013-04-22
+date: 2014-04-23
 title: 'Зачем Опере Вебкит, или Опиум для народа'
-authors:
-- '[Вадим Макеев](http://pepelsbey.net/)'
-tags:
-- opera
-- webkit
-vimeo: 73934576
 youtube: Y70JypQCy08
+vimeo: 73934576
+time: 50:06
+pres: http://webstandardsdays.ru/2014/04/23/pres/opera-webkit/
+authors: Вадим Макеев
 ---

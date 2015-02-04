@@ -1,11 +1,9 @@
 ---
-date: 2011-10-29 14:00:00+03:00
-title: 'CSS3 Media Queries: легкость превращений'
-authors:
-- 'Артемий Ломов'
-tags:
-- css
-- media-queries
-vimeo: 33149535
+date: 2011-10-29
+title: 'CSS3 Media Queries: лёгкость превращений'
 youtube: cp4zK2wJPyg
+vimeo: 33149535
+time: 31:21
+pres: http://webstandardsdays.ru/2011/10/29/pres/media-queries-intro/
+authors: Артемий Ломов
 ---
