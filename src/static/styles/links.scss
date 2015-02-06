@@ -1,0 +1,30 @@
+// -------------------------------
+// Links
+// -------------------------------
+
+// Blue
+
+%link--blue {
+	color:$blue;
+	&:hover,
+	&:focus {
+		color:lighten($blue, 10%);
+		}
+	}
+%link--blue-hover {
+	&:hover,
+	&:focus {
+		color:$blue;
+		}
+	}
+
+// Visited
+
+// %link--visited {
+// 	&:visited {
+// 		color:$violet;
+// 		&:hover {
+// 			color:lighten($violet, 12%);
+// 			}
+// 		}
+// 	}

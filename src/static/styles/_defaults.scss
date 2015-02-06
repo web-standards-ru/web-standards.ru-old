@@ -1,0 +1,60 @@
+// -------------------------------
+// Colors
+// -------------------------------
+
+$green:#9ECB1D;
+$blue:#2D93B8;
+$dark:#2E5A75;
+
+// -------------------------------
+// Grid
+// -------------------------------
+
+$susy:(
+	container:1200px,
+	math:fluid,
+	output:isolate,
+	global-box-sizing:border-box,
+	use-custom:(
+		clearfix:true
+		)
+	);
+
+// -------------------------------
+// Mixins
+// -------------------------------
+
+// Retina
+
+@mixin retina {
+	@media (-webkit-min-device-pixel-ratio:2),
+		(min-resolution:192dpi) {
+		@content;
+		}
+	}
+
+// Clearfix
+
+@mixin clearfix {
+	&:before,
+	&:after {
+		display:block;
+		content:'';
+		}
+	&:after {
+		clear:both;
+		}
+	}
+
+// Offscreen
+
+@mixin offscreen {
+	position:absolute;
+	clip:rect(0 0 0 0);
+	overflow:hidden;
+	margin:-1px;
+	padding:0;
+	width:1px;
+	height:1px;
+	border:0;
+	}

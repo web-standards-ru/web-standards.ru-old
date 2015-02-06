@@ -42,12 +42,7 @@ module.exports = {
 
 	},
 
-	plugins: {
-		grunt: {
-			writeAfter: false,
-			generateAfter: []
-		}
-	},
+	ignoreCustomPatterns: /.scss$/,
 
 	events: {
 		renderBefore: function() {

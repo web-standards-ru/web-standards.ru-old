@@ -1,0 +1,26 @@
+// -------------------------------
+// Global
+// -------------------------------
+
+* {
+	&, &:before, &:after {
+		box-sizing:border-box;
+		}
+	}
+html {
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	}
+
+// Body
+
+body {
+	@include container;
+	background:#FFF;
+	color:#000;
+	font:16px/1.5 Helvetica, Arial, sans-serif;
+	}
+	a {
+		text-decoration:none;
+		@extend %link--blue;
+		}

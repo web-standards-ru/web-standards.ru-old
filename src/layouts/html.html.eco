@@ -3,6 +3,7 @@
 <head>
 	<title><%- @htmlTitle() %></title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="/styles/screen.css">
 </head>
 <body>
 	<header>

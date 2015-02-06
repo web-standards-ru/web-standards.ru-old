@@ -4,20 +4,6 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
-		autoprefixer: {
-			task: {
-				src: 'out/styles/screen.css'
-			}
-		},
-
-		cssmin: {
-			task: {
-				files: {
-					'out/styles/screen.css': 'out/styles/screen.css'
-				}
-			}
-		},
-
 		htmlmin: {
 			html: {
 				options: {
@@ -39,14 +25,83 @@ module.exports = function(grunt) {
 				src: 'feed/**/*.xml',
 				dest: 'out/'
 			}
+		},
+
+		sass: {
+			task: {
+				files: {
+					'out/styles/screen.css': 'src/static/styles/screen.scss'
+				}
+			}
+		},
+
+		autoprefixer: {
+			task: {
+				src: 'out/styles/screen.css'
+			}
+		},
+
+		cssmin: {
+			task: {
+				files: {
+					'out/styles/screen.css': 'out/styles/screen.css'
+				}
+			}
+		},
+
+		connect: {
+			task: {
+				options: {
+					base: 'out',
+					port: 0,
+					livereload: true,
+					open: true
+				}
+			}
+		},
+
+		watch: {
+			styles: {
+				files: 'src/static/styles/*.scss',
+				tasks: 'styles'
+			},
+			docpad: {
+				files: 'src/**/*.{md,eco}',
+				tasks: 'shell'
+			},
+			livereload: {
+				options: {
+					livereload: true
+				},
+				files: 'out/**/*.{html,css}'
+			}
+		},
+
+		shell: {
+			docpad: {
+				command: 'docpad generate --env static'
+			}
 		}
 
 	});
 
-	grunt.registerTask('default', [
+	grunt.registerTask('styles', [
+		'sass',
+		'autoprefixer'
+	]);
+
+	grunt.registerTask('build', [
+		'styles',
+		'shell',
 		'htmlmin',
-		'autoprefixer',
 		'cssmin'
+	]);
+
+	grunt.registerTask('default', [
+		'styles',
+		'shell',
+		'connect',
+		'watch'
 	]);
 
 };
