@@ -1,0 +1,43 @@
+// -------------------------------
+// Grid
+// -------------------------------
+
+#grid {
+
+	@include container;
+
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	display:none;
+	padding:0 20px;
+	overflow:hidden;
+	pointer-events:none;
+
+	&:target {
+		display:block;
+		}
+
+	// Column
+
+	div {
+		width:0;
+		height:100%;
+		box-shadow:0 0 0 1px rgba(red, 0.1) inset;
+		}
+
+	// Generator
+
+	@each $key, $value in $layouts {
+		@include layout-breakpoint($key) {
+			@for $column from 1 through nth($value, 1) {
+				div:nth-child(#{$column}) {
+					@include span(1 at $column);
+					}
+				}
+			}
+		}
+
+	}

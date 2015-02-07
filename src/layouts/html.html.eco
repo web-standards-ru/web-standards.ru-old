@@ -6,17 +6,38 @@
 	<link rel="stylesheet" href="/styles/screen.css">
 </head>
 <body>
-	<header>
+	<header class="header">
 <% if @isIndex(@document): %>
 		<h1><%= @site.title %></h1>
 <% else: %>
 		<p><a href="/"><%= @site.title %></a></p>
 <% end %>
 		<p><%= @site.description %></p>
+		<nav>
+			<ul>
+				<li></li>
+			</ul>
+		</nav>
 	</header>
-	<%- @content %>
-	<footer>
+	<main class="main">
+		<%- @content %>
+	</main>
+	<footer class="footer">
 		<p>Веб-стандарты © 2006—<%= @getDate(@site.date, 'YYYY') %></p>
 	</footer>
+	<div id="grid">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
 </body>
 </html>
