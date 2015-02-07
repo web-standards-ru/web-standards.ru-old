@@ -4,6 +4,10 @@ layout: 'html'
 
 <h1><%- @document.title %></h1>
 
-<p><%= @getDate(@document.date) %></p>
+<p>
+	<time datetime="<%= @getDate(@document.date, 'YYYY-MM-DD') %>">
+		<%= @getDate(@document.date) %>
+	</time>
+</p>
 
 <%- @content %>
