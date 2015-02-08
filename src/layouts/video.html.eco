@@ -11,3 +11,9 @@ layout: 'html'
 </p>
 
 <iframe allowfullscreen src="//youtube.com/embed/<%- @document.youtube %>?controls=2&amp;modestbranding=1&amp;theme=light&amp;showinfo=0"></iframe>
+
+<% for entry in @getRelatedDocuments(): %>
+<ul>
+	<li><a href="<%= entry.url %>"><%- entry.title %></a></li>
+</ul>
+<% end %>

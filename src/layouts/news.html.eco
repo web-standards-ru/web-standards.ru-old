@@ -11,3 +11,9 @@ layout: 'html'
 </p>
 
 <%- @content %>
+
+<% for entry in @getRelatedDocuments(): %>
+<ul>
+	<li><a href="<%= entry.url %>"><%- entry.title %></a></li>
+</ul>
+<% end %>
