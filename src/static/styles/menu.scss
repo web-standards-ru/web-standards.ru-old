@@ -4,7 +4,17 @@
 
 .menu {
 
+	float:left;
+	padding-left:15px;
+	height:64px;
+
 	&__item {
+		float:left;
+		padding:0 10px;
+		line-height:64px;
+		}
+
+	&__link {
 		@extend %link--white;
 		}
 
