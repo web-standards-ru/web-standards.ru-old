@@ -3,7 +3,7 @@ slug: translate-attribute
 title: 'В HTML5 добавлен новый атрибут `translate`'
 tags:
 - html
-- localization
+- l12n
 date: 2012-07-30 00:31:36+03:00
 ---
 
