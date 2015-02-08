@@ -20,6 +20,7 @@
 				<li><a href="/news/" class="menu__item">Новости</a></li>
 				<li><a href="/articles/" class="menu__item">Статьи</a></li>
 				<li><a href="/videos/" class="menu__item">Видео</a></li>
+				<li><a href="/books/" class="menu__item">Книги</a></li>
 			</ul>
 		</nav>
 	</header>
