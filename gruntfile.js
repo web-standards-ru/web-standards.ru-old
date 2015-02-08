@@ -87,14 +87,14 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('styles', [
 		'sass',
-		'autoprefixer'
+		'autoprefixer',
+		'cssmin'
 	]);
 
 	grunt.registerTask('build', [
 		'styles',
 		'shell',
 		'htmlmin',
-		'cssmin'
 	]);
 
 	grunt.registerTask('default', [

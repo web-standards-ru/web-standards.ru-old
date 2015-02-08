@@ -18,9 +18,8 @@ body {
 	@include container;
 	background:#FFF;
 	color:#000;
-	font:16px/1.5 Helvetica, Arial, sans-serif;
+	font:16px/1.5 Roboto, Helvetica, Arial, sans-serif;
 	}
 	a {
 		text-decoration:none;
-		@extend %link--blue;
 		}

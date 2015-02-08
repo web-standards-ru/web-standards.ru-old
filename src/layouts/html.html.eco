@@ -7,15 +7,19 @@
 </head>
 <body>
 	<header class="header">
+		<div class="header__logo">
 <% if @isIndex(@document): %>
-		<h1><%= @site.title %></h1>
+			<h1 class="header__title"><%= @site.title %></h1>
 <% else: %>
-		<p><a href="/"><%= @site.title %></a></p>
+			<p class="header__title"><a href="/"><%= @site.title %></a></p>
 <% end %>
-		<p><%= @site.description %></p>
-		<nav>
+			<p class="header__subtitle"><%= @site.description %></p>
+		</div>
+		<nav class="menu">
 			<ul>
-				<li></li>
+				<li><a href="/news/" class="menu__item">Новости</a></li>
+				<li><a href="/articles/" class="menu__item">Статьи</a></li>
+				<li><a href="/videos/" class="menu__item">Видео</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -26,10 +30,6 @@
 		<p>Веб-стандарты © 2006—<%= @getDate(@site.date, 'YYYY') %></p>
 	</footer>
 	<div id="grid">
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
 		<div></div>
 		<div></div>
 		<div></div>

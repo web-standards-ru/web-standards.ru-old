@@ -1,13 +1,11 @@
 // -------------------------------
-// Main
+// Header
 // -------------------------------
 
-.main {
+.menu {
 
-	padding:10px 20px;
-
-	a {
-		@extend %link--blue;
+	&__item {
+		@extend %link--white;
 		}
 
 	}

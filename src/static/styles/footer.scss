@@ -4,6 +4,6 @@
 
 .footer {
 	padding:10px 20px;
-	background:$dark;
-	color:#FFF;
+	background:$black;
+	@include faux-alpha(rgba(#FFF, 0.4), $black)
 	}

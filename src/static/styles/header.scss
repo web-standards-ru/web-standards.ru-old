@@ -3,8 +3,22 @@
 // -------------------------------
 
 .header {
+
 	padding:10px 20px;
 	background:$green;
 	color:#FFF;
-	}
 
+	a {
+		@extend %link--white;
+		}
+
+	&__logo {
+		}
+
+	&__title {
+		}
+
+	&__subtitle {
+		}
+
+	}

@@ -5,6 +5,7 @@
 $green:#9ECB1D;
 $blue:#2D93B8;
 $dark:#2E5A75;
+$black:#153543;
 
 // -------------------------------
 // Breakpoints
@@ -22,8 +23,8 @@ $desk-and-up:$desk;
 $layouts:(
 	$up-to-palm:2 1/8,
 	$palm-to-lap:3 1/8,
-	$lap-to-desk:6 1/6,
-	$desk-and-up:12 1/4
+	$lap-to-desk:4 1/6,
+	$desk-and-up:8 1/6
 	);
 
 @mixin layout-breakpoint($query) {
@@ -83,4 +84,13 @@ $susy:(
 	width:1px;
 	height:1px;
 	border:0;
+	}
+
+// Faux Alpha
+
+@mixin faux-alpha($color, $background) {
+	$percent:alpha($color) * 100%;
+	$opaque:opacify($color, 1);
+	$solid-color:mix($opaque, $background, $percent);
+	color:$solid-color;
 	}

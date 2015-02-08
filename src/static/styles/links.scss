@@ -11,20 +11,9 @@
 		color:lighten($blue, 10%);
 		}
 	}
-%link--blue-hover {
-	&:hover,
-	&:focus {
-		color:$blue;
-		}
+
+// White
+
+%link--white {
+	color:white;
 	}
-
-// Visited
-
-// %link--visited {
-// 	&:visited {
-// 		color:$violet;
-// 		&:hover {
-// 			color:lighten($violet, 12%);
-// 			}
-// 		}
-// 	}
