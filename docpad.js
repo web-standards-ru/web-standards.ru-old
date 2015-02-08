@@ -42,7 +42,7 @@ module.exports = {
 
 	},
 
-	ignoreCustomPatterns: /.scss$/,
+	ignoreCustomPatterns: /.scss$|.js$/,
 
 	events: {
 		renderBefore: function() {

@@ -27,6 +27,23 @@ module.exports = function(grunt) {
 			}
 		},
 
+		concat: {
+			task: {
+				src: [
+					'src/static/scripts/webfont.js',
+					'src/static/scripts/webfont-config.js'
+				],
+				dest: 'out/scripts/script.js'
+			}
+		},
+
+		uglify: {
+			task: {
+                src: 'out/scripts/script.js',
+                dest: 'out/scripts/script.js'
+			}
+		},
+
 		sass: {
 			task: {
 				files: {
@@ -85,6 +102,11 @@ module.exports = function(grunt) {
 
 	});
 
+	grunt.registerTask('scripts', [
+		'concat',
+		'uglify'
+	]);
+
 	grunt.registerTask('styles', [
 		'sass',
 		'autoprefixer',
@@ -92,14 +114,16 @@ module.exports = function(grunt) {
 	]);
 
 	grunt.registerTask('build', [
-		'styles',
 		'shell',
 		'htmlmin',
+		'scripts',
+		'styles'
 	]);
 
 	grunt.registerTask('default', [
-		'styles',
 		'shell',
+		'scripts',
+		'styles',
 		'connect',
 		'watch'
 	]);
