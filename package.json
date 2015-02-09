@@ -3,7 +3,7 @@
   "dependencies": {
     "docpad": "~6.69.2",
     "docpad-plugin-eco": "~2.1.0",
-    "docpad-plugin-marked": "~2.2.1",
+    "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-paged": "~2.2.5",
     "docpad-plugin-related": "~2.2.2",
     "grunt": "^0.4.5",
