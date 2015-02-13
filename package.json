@@ -1,7 +1,7 @@
 {
   "private": true,
   "dependencies": {
-    "docpad": "~6.69.2",
+    "docpad": "~6.70.1",
     "docpad-plugin-eco": "~2.1.0",
     "docpad-plugin-marked": "~2.3.0",
     "docpad-plugin-paged": "~2.2.5",
@@ -10,11 +10,11 @@
     "grunt-autoprefixer": "^2.2.0",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-connect": "^0.9.0",
-    "grunt-contrib-cssmin": "^0.11.0",
+    "grunt-contrib-cssmin": "^0.12.1",
     "grunt-contrib-htmlmin": "^0.4.0",
     "grunt-contrib-uglify": "^0.7.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-sass": "^0.17.0",
+    "grunt-sass": "^0.18.0",
     "grunt-shell": "^1.1.1",
     "load-grunt-tasks": "^3.1.0",
     "marked": "^0.3.3",
