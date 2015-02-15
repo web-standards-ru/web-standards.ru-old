@@ -19,6 +19,6 @@
     "load-grunt-tasks": "^3.1.0",
     "marked": "^0.3.3",
     "moment": "^2.9.0",
-    "sanitize-html": "^1.5.3"
+    "sanitize-html": "^1.6.0"
   }
 }
