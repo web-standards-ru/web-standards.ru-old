@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
+	require('time-grunt')(grunt);
 
 	grunt.initConfig({
 
@@ -23,6 +24,19 @@ module.exports = function(grunt) {
 				expand: true,
 				cwd: 'out/',
 				src: 'feed/**/*.xml',
+				dest: 'out/'
+			}
+		},
+
+		beml: {
+			options: {
+				elemPrefix: '__',
+				modPrefix: '--'
+			},
+			files: {
+				expand: true,
+				cwd: 'out/',
+				src: '**/index.html',
 				dest: 'out/'
 			}
 		},
@@ -77,13 +91,13 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			html: {
+				files: 'src/**/*.{md,eco}',
+				tasks: 'html'
+			},
 			styles: {
 				files: 'src/static/styles/*.scss',
 				tasks: 'styles'
-			},
-			docpad: {
-				files: 'src/**/*.{md,eco}',
-				tasks: 'shell'
 			},
 			livereload: {
 				options: {
@@ -101,9 +115,10 @@ module.exports = function(grunt) {
 
 	});
 
-	grunt.registerTask('scripts', [
-		'concat',
-		'uglify'
+	grunt.registerTask('html', [
+		'shell',
+		'htmlmin',
+		'beml'
 	]);
 
 	grunt.registerTask('styles', [
@@ -112,17 +127,19 @@ module.exports = function(grunt) {
 		'cssmin'
 	]);
 
+	grunt.registerTask('scripts', [
+		'concat',
+		'uglify'
+	]);
+
 	grunt.registerTask('build', [
-		'shell',
-		'htmlmin',
-		'scripts',
-		'styles'
+		'html',
+		'styles',
+		'scripts'
 	]);
 
 	grunt.registerTask('default', [
-		'shell',
-		'scripts',
-		'styles',
+		'build',
 		'connect',
 		'watch'
 	]);

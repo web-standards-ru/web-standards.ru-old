@@ -8,34 +8,37 @@
 </head>
 <body>
 
-	<header class="header">
+	<header block="header">
 <% if @isIndex(@document): %>
-		<h1 class="header__title">
-			<span class="header__text"><%= @site.title %></span>
+		<h1 elem="title">
+			<span elem="text"><%= @site.title %></span>
 		</h1>
 <% else: %>
-		<p class="header__title">
-			<a href="/" class="header__link">
-				<span class="header__text"><%= @site.title %></span>
+		<p elem="title">
+			<a href="/" elem="link">
+				<span elem="text"><%= @site.title %></span>
 			</a>
 		</p>
 <% end %>
-		<p class="header__text"><%= @site.description %></p>
-		<nav class="menu">
+		<p elem="text"><%= @site.description %></p>
+		<nav block="menu">
 			<ul>
-				<li class="menu__item"><a href="/news/" class="menu__link">Новости</a></li>
-				<li class="menu__item"><a href="/articles/" class="menu__link">Статьи</a></li>
-				<li class="menu__item"><a href="/videos/" class="menu__link">Видео</a></li>
-				<li class="menu__item"><a href="/books/" class="menu__link">Книги</a></li>
+				<li elem="item"><a href="/news/" elem="link">Новости</a></li>
+				<li elem="item"><a href="/articles/" elem="link">Статьи</a></li>
+				<li elem="item"><a href="/videos/" elem="link">Видео</a></li>
+				<li elem="item"><a href="/books/" elem="link">Книги</a></li>
 			</ul>
 		</nav>
 	</header>
-	<main class="main">
+
+	<main block="main">
 		<%- @content %>
 	</main>
-	<footer class="footer">
+
+	<footer block="footer">
 		<p>Веб-стандарты © 2006—<%= @getDate(@site.date, 'YYYY') %></p>
 	</footer>
+
 	<div id="grid">
 		<div></div>
 		<div></div>
@@ -46,6 +49,8 @@
 		<div></div>
 		<div></div>
 	</div>
+
 	<script src="/scripts/script.js"></script>
+
 </body>
 </html>
