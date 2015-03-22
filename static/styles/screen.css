@@ -596,6 +596,9 @@ a {
 
 /* Content Article
 ---------------------------------------- */
+.content-article {
+	line-height:1.7;
+	}
 
 /* Headings */
 .content-article h2,
