@@ -1,7 +1,7 @@
 <?php	get_header(); ?>
 				<div id="main" class="content content-primary">
 <?php	if ( have_posts() ) : ?>
-<?php		query_posts('cat=3&showposts=3'); ?>
+<?php		query_posts('cat=3&showposts=4'); ?>
 					<ol class="archive-list article-list">
 <?php		while ( have_posts() ) : the_post(); ?>
 						<li class="archive-item hentry">
