@@ -11,7 +11,7 @@ publish:
 
 install:
 	@echo 'Getting WordPress…'
-	@curl -O http://ru.wordpress.org/latest-ru_RU.tar.gz
+	@curl -L -O http://ru.wordpress.org/latest-ru_RU.tar.gz
 	@tar --strip-components=1 -xf latest-ru_RU.tar.gz
 	@rm -f latest-ru_RU.tar.gz
 	@echo 'Copying files…'
