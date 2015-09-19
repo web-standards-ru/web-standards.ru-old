@@ -73,7 +73,7 @@ a {
 	position:relative;
 	overflow:hidden;
 	margin:0 0 20px;
-	padding-left:64px;
+	padding-left:53px;
 	background:#122E39;
 	color:#FFF;
 	}
@@ -84,12 +84,12 @@ a {
 	top:50%;
 	left:10px;
 	margin:-17px 0 0;
-	width:44px;
+	width:33px;
 	height:33px;
 	}
 	#header .logotype img {
 		display:block;
-		width:44px;
+		width:33px;
 		height:33px;
 		}
 	#header .logotype a img {
@@ -106,7 +106,7 @@ a {
 /* Heading */
 #header .heading {
 	padding:7px 0 9px 10px;
-	width:876px;
+	width:887px;
 	background:#153543;
 	line-height:1;
 	font-family:'Trebuchet MS', Arial, sans-serif;
