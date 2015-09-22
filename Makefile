@@ -1,5 +1,8 @@
 TODAY = $(shell date "+%Y-%m-%d")
 DUMP = webstandards-$(TODAY).sql
+DB_HOST = localhost
+DB_USER = wst
+DB_NAME = webstandards
 
 publish:
 	@echo 'Uploading files…'
@@ -23,7 +26,8 @@ install:
 cleanup:
 	@rm -rf wp-* *.php readme.html license.txt
 
+# --skip-opt was added to fix some permission issue (mysqldump error 1044)
 getdump:
 	@echo 'Connecting to DB…'
-	@ssh wst@web-standards.ru 'mysqldump -c -h mysql.web-standards.ru -u wst -p webstandards' > $(DUMP)
+	@ssh web-standards.ru 'mysqldump -c -h $(DB_HOST) -u $(DB_USER) -p --skip-opt $(DB_NAME)' > $(DUMP)
 	@echo 'Your dump is ready: $(DUMP)'
