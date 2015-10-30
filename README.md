@@ -10,16 +10,8 @@
 	cd web-standards-ru/
 	npm install
 	bower install
-	node_modules/.bin/docpad generate --env static
+	npm run static
 
-Вместо замысловатого последнего шага удобнее установить DocPad глобально:
+Можно удобно запускать автогенерацию и сервер для разработки:
 
-	npm install docpad -g
-
-Тогда можно будет удобно запускать автогенерацию и сервер для разработки:
-
-	docpad run
-
-Для простой генерации в той же папке без сервера:
-
-	docpad generate --env static
+	npm run server

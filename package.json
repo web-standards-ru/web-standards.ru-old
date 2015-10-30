@@ -1,5 +1,9 @@
 {
   "private": true,
+  "scripts": {
+    "static": "docpad generate --env static",
+    "server": "docpad run"
+  },
   "dependencies": {
     "docpad": "~6.78.4",
     "docpad-plugin-eco": "~2.1.0",
