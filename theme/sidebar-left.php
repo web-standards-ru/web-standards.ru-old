@@ -31,9 +31,9 @@
 					<dt>Ссылки</dt>
 					<dd class="content content-secondary content-aside">
 						<ul>
-							<li><a href="https://twitter.com/webstandards_ru">Новости в Твиттере</a></li>
-							<li><a href="https://vimeo.com/channels/wstdays">Видео на Vimeo</a></li>
-							<li><a href="https://soundcloud.com/web-standards">Подкаст на SoundCloud</a></li>
+							<li><a href="https://twitter.com/webstandards_ru">Новости в Твиттере</a></li>
+							<li><a href="https://vimeo.com/channels/wstdays">Видео на Vimeo</a></li>
+							<li><a href="https://soundcloud.com/web-standards">Подкаст на SoundCloud</a></li>
 							<li><a href="https://vk.com/webstandards_ru">ВКонтакте</a></li>
 							<li><a href="https://fb.com/webstandardsru">Facebook</a></li>
 							<li><a href="https://plus.google.com/+Web-standardsRu/posts">Google+</a></li>
