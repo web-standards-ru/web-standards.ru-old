@@ -49,7 +49,7 @@
 						<label for="search-text">Поиск</label>
 					</legend>
 					<input type="hidden" name="site" value="web-standards.ru">
-					<input type="search" name="text" id="search-text" placeholder="Что-нибудь" class="text">
+					<input type="search" name="text" id="search-text" class="text">
 					<input type="submit" title="Найти" value="Найти" class="submit">
 				</fieldset>
 			</form>
